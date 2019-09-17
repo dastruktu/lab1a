@@ -34,7 +34,7 @@ public class Demo2_StackQueue extends BaseConsole{
             printLn("ERROR!!! Operacija pop() su tuščiu steku negalima");
         }
     }
-    private void poolQueue() {
+    private void pollQueue() {
         queue.poll();
         ta1.appendText(queue.toString()+nL);
     }
@@ -47,7 +47,7 @@ public class Demo2_StackQueue extends BaseConsole{
         super.createControls();
         addButton("push", action -> pushStack());       
         addButton("pop",  action -> popStack() );       
-        addButton("pool", action -> poolQueue());       
+        addButton("pool", action -> pollQueue());       
         addButton("addToMid", action -> addToListMid());       
     }
 // UŽDUOTIS: ištirkite kitų struktūrų metodus
