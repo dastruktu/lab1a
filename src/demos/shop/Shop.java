@@ -106,13 +106,14 @@ public class Shop {
     }
     // sudaromas parduotuvės ataskaitos tekstą
     public String fullReport(double limGE, double limLE){
+        Item maxItem = maxItemPrice();
         StringBuilder sb = new StringBuilder();
         sb.append("===== Parduotuvės " + Name + " ATASKAITA\n")
           .append("----- Prekių skaičius yra : " + store.size() + "\n")
           .append("---- Vienetų skaičius yra : " + countUnits() + "\n")
           .append("Sandėlio prekių kaina yra : " + sumStorePrice()+ "\n")
-          .append("----- Brangiausia prekė yra:\n")                                
-          .append(maxItemPrice().toString() + "\n")
+          .append("----- Brangiausia prekė:\n")                                
+          .append((maxItem == null ? "nėra" : maxItem.toString()) + "\n")
           .append("----- Prekės, kurių kaina >= " + limGE + "\n")
           .append(itemsPriceGE(limGE));
         return sb.toString();
