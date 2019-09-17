@@ -32,7 +32,7 @@ public class TrialWithGuiFX extends BaseConsole{
         });
         addButton("ataskaita", action -> {
             shop.addItems(ta1.getText(), false);
-            String answer = shop.fullRaport(vip.limGE(), vip.limLE());
+            String answer = shop.fullReport(vip.limGE(), vip.limLE());
             ta2.appendText(answer); 
         });
         addButton("gamintojai", action -> {

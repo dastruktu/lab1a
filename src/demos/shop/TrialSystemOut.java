@@ -94,7 +94,7 @@ public class TrialSystemOut {
 //        output.addAll(input2);
         saveToFile(shop.Name + ".csv", output);
         loadFromFile(shop.Name + ".csv");  // formavimas iš failo
-        shop.fullRaport(30, 10);        
+        shop.fullReport(30, 10);        
     }
     public static void main(String[] args) {
         // lietuviškoje lokalėje dešimtainė dalis atskiriama kableliu

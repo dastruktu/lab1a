@@ -105,7 +105,7 @@ public class Shop {
         print(store);
     }
     // sudaromas parduotuvės ataskaitos tekstą
-    public String fullRaport(double limGE, double limLE){
+    public String fullReport(double limGE, double limLE){
         StringBuilder sb = new StringBuilder();
         sb.append("===== Parduotuvės " + Name + " ATASKAITA\n")
           .append("----- Prekių skaičius yra : " + store.size() + "\n")
