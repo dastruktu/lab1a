@@ -72,13 +72,13 @@ public class Shop {
     }
     // metodas formuoja gamintojų ir jų prekių kiekio sąrašą 
     // tai pradinis uždavinio sprendimo variantas, panaudojant tik List
-    public String differentProducentsCount(){
-        List<String>  producents = new ArrayList<>();
+    public String differentProducerCount(){
+        List<String>  producers = new ArrayList<>();
         List<Integer> prodCounts = new ArrayList<>();         
         for(Item it : store) {
-            int ind = producents.indexOf(it.producent);
+            int ind = producers.indexOf(it.producer);
             if (ind < 0) { // jei gamintojo sąraše dar nebuvo
-                producents.add(it.producent);
+                producers.add(it.producer);
                 prodCounts.add(1);  // pradinė skaitliuko reikšmė 1
             }
             else 
@@ -86,7 +86,7 @@ public class Shop {
         }
         StringBuilder sb = new StringBuilder("Skirtingi gamintojai\n");
         int ind = 0;
-        for(String prod : producents)
+        for(String prod : producers)
             sb.append(String.format("| %2d | %-10s | %3d |", 
                                      ind+1,  prod,   prodCounts.get(ind++)))
               .append("\n");

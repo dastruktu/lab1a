@@ -37,7 +37,7 @@ public class TrialWithGuiFX extends BaseConsole{
         });
         addButton("gamintojai", action -> {
             shop.addItems(ta1.getText(), false);
-            String answer = shop.differentProducentsCount();
+            String answer = shop.differentProducerCount();
             ta2.appendText(answer); 
         });
     }

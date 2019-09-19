@@ -9,13 +9,13 @@ import java.util.regex.Pattern;
 
 public class Item {
     String name;
-    String producent;
+    String producer;
     int quantity;
     double unitPrice;
     // prekės konstruktorius - parametrų reikšmės perkeliamos į laukus
-    public Item(String name, String producent, int quantity, double unitPrice){
+    public Item(String name, String producer, int quantity, double unitPrice){
         this.name = name;           // žodelis this nurodo esamo objekto laukus
-        this.producent = producent; // t.y. išsprendžia konfliktą tarp vardų
+        this.producer = producer; // t.y. išsprendžia konfliktą tarp vardų
         this.quantity  = quantity;
         this.unitPrice = unitPrice;
     }
@@ -31,15 +31,15 @@ public class Item {
         String Name = scan.next();
         scan.skip(";");            // praleidžiame patį skyriklį
         scan.useDelimiter(delim);  // atstatome standartinius skyriklius
-        String Producent =  scan.next();
+        String Producer =  scan.next();
         int Quantity     =  scan.nextInt();
         double UnitPrice = scan.nextDouble();
-        return new Item(Name, Producent, Quantity, UnitPrice);
+        return new Item(Name, Producer, Quantity, UnitPrice);
     }
     // objektą atvaizduoja tekstine eilute, tinkama lentelės formavimui
     @Override
     public String toString() {
         return String.format("| %-20s | %-10s | %3d | %8.2f |",
-                        name, producent, quantity, unitPrice);
+                        name, producer, quantity, unitPrice);
     }
 }
