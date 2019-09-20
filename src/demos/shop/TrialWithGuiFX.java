@@ -59,7 +59,7 @@ public class TrialWithGuiFX extends BaseConsole {
 
     @Override
     public void start(Stage stage) throws Exception {
-        super.start(stage); //To change body of generated methods, choose Tools | Templates.
+        super.start(stage);
         // lietuviškoje lokalėje dešimtainė dalis atskiriama kableliu
         // kad nebūtų nesusipratimų su default kultūra - fiksuojame LT
         Locale.setDefault(new Locale("LT"));

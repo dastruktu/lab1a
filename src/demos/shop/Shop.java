@@ -62,7 +62,7 @@ public class Shop {
     public double sumStorePrice() {
         double sum = 0;
         for (Item item : store) {
-            sum += item.total();
+            sum += item.totalPrice();
         }
         return sum;
     }

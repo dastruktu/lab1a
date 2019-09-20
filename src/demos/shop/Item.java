@@ -5,7 +5,6 @@
 package demos.shop;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Item {
 
@@ -16,29 +15,22 @@ public class Item {
 
     // prekės konstruktorius - parametrų reikšmės perkeliamos į laukus
     public Item(String name, String producer, int quantity, double unitPrice) {
-        this.name = name;           // žodelis this nurodo esamo objekto laukus
+        this.name = name;         // žodelis this nurodo esamo objekto laukus
         this.producer = producer; // t.y. išsprendžia konfliktą tarp vardų
         this.quantity = quantity;
         this.unitPrice = unitPrice;
     }
 
     // metodas, kuris skaičiuoja išvestinę charakteristiką pagal laukų reikšmes
-    public double total() {
+    public double totalPrice() {
         return unitPrice * quantity;
     }
 
     // suformuoja objektą iš duomenų eilutės, ją skaidydamas į atskiras dalis
     public static Item parse(String input) {
         Scanner scan = new Scanner(input);
-        Pattern delim = scan.delimiter();
-        scan.useDelimiter(";");    // prekės pavadinimas turi baigtis ";"
-        String scanName = scan.next();
-        scan.skip(";");            // praleidžiame patį skyriklį
-        scan.useDelimiter(delim);  // atstatome standartinius skyriklius
-        String scanProducer = scan.next();
-        int scanQuantity = scan.nextInt();
-        double scanUnitPrice = scan.nextDouble();
-        return new Item(scanName, scanProducer, scanQuantity, scanUnitPrice);
+        scan.useDelimiter(";");
+        return new Item(scan.next(), scan.next(), scan.nextInt(), scan.nextDouble());
     }
 
     // objektą atvaizduoja tekstine eilute, tinkama lentelės formavimui

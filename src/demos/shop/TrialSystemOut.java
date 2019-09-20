@@ -17,16 +17,16 @@ public class TrialSystemOut {
     }
     // bandomieji duomenys
     final public static String[] input1 = {
-        "Krepšinio kamuolys; Molten 7 32,99",
-        "Teniso raketė;    Nike  20 49,98",
-        "Futbolo kamuolys;  Nike   2 31,00",
-        "Beisbolo kamuolys;  Nike  35 14,00\n"
+        "Krepšinio kamuolys;Molten;7;32,99",
+        "Teniso raketė;Nike;20;49,98",
+        "Futbolo kamuolys;Nike;2;31,00",
+        "Beisbolo kamuolys;Nike;35;14,00\n"
     };
     final public static String[] input2 = {
-        "Krepšinio kamuolys; Adidas 7 30,99",
-        "Futbolo kamuolys;  Adidas 2 26,00",
-        "Teniso raketė;   Nike  20 66,98",
-        "Beisbolo kamuolys;  Nike 35 17,00\n"
+        "Krepšinio kamuolys;Adidas;7;30,99",
+        "Futbolo kamuolys;Adidas;2;26,00",
+        "Teniso raketė; Nike;20;66,98",
+        "Beisbolo kamuolys;Nike;35;17,00\n"
     };
 
     // ============= išbandomi prekių ir parduotuvių metodai
@@ -37,8 +37,8 @@ public class TrialSystemOut {
         Item si2 = new Item("Teniso raketė", "Nike", 100, 93.99);
         System.out.println(si1);
         System.out.println(si2);
-        System.out.println("Pirmos prekės bendra kaina = " + si1.total());
-        System.out.println("Antros prekės bendra kaina = " + si2.total());
+        System.out.println("Pirmos prekės bendra kaina = " + si1.totalPrice());
+        System.out.println("Antros prekės bendra kaina = " + si2.totalPrice());
     }
 
     // papildo prekių sąrašą su konstruktoriumi suformuotomis prekėmis
