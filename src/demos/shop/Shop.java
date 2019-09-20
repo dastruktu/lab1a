@@ -7,12 +7,12 @@ import java.util.*;
 
 //==============================================
 public class Shop {
-    public String Name ;         // čia parduotuvės vardas
+    public String name ;         // čia parduotuvės vardas
     // dar gali būti registracijos kodas, metai, adresas, ...
     private List<Item> store;    // esminis laukas - prekių sandėlys
 
-    public Shop(String Name)  {
-        this.Name = Name;
+    public Shop(String name)  {
+        this.name = name;
         store = new ArrayList<>();  // pradžioje prekių sąrašas yra tuščias
     }
     // metodas su kintamu parametrų skaičiumi (sąrašas nenaudojamas)
@@ -108,7 +108,7 @@ public class Shop {
     public String fullReport(double limGE, double limLE){
         Item maxItem = maxItemPrice();
         StringBuilder sb = new StringBuilder();
-        sb.append("===== Parduotuvės " + Name + " ATASKAITA\n")
+        sb.append("===== Parduotuvės " + name + " ATASKAITA\n")
           .append("----- Prekių skaičius yra : " + store.size() + "\n")
           .append("---- Vienetų skaičius yra : " + countUnits() + "\n")
           .append("Sandėlio prekių kaina yra : " + sumStorePrice()+ "\n")
