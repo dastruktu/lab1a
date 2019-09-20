@@ -46,11 +46,16 @@ keturiuose taškuose
   * `drawRecursive()`: sukurkite metodą, kur rekursijos metu gaunami ovalai
 būtų nukreipti į apačią
 * `Demo2_Transform`
-  * drawSuite1(): sukurkite savo figūrų rinkinį, kurį transformuosite
+  * `drawSuite1()`: sukurkite savo figūrų rinkinį, kurį transformuosite
 * `Demo3_AnimTurn`: gautus bėžinius sudėkite į laboratorinio ataskaitą
   * išbandykite rekursinius piešimo metodus
   * išbandykite su savo baziniais rinkiniais
 * `Demo5_MouseShapes`
   * `EventHandler<MouseEvent> clickInfo`: išbandykite pakartotinius figūrų
 paspaudimus, kokia reakcija?
+* `Demo6_Images`
+  * `createSpace()`: paaiškinkite kintamojo `t` skaičiavime naudojamą konstantą
+  * paskaičiuokite, per kiek laiko žemė apskrieja aplink saulę
+  * sukurkite start/stop mygtuką, kuris aktyvuotų ir stabdytų žemę
+  * papildykite erdvę kitais kosminiais ar fantastiniais kūnais
  

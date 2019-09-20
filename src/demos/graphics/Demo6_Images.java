@@ -72,11 +72,12 @@ public class Demo6_Images extends BaseGraphics {
             }
         }.start();
     }
-
     // paaiškinkite kintamojo t skaičiavime naudojamą konstantą
+
     // paskaičiuokite per kiek laiko apskrieja žemė aplink saulę
     // sukurkite start - stopinį mygtuką, kuris aktyvuotų ir stabdytų žemę
     // papildykite erdvę kitais kosminiais ar fantastiniais kūnais
+    
     @Override
     public void createControls() {
         addButton("clear", e -> nodes.clear());
