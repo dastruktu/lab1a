@@ -18,42 +18,48 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public abstract class BaseApps extends Application {     
+public abstract class BaseApps extends Application {
+
     final static public String nL = "\n"; // alias dėl new Line (length()=1)
-            //System.getProperty("line.separator"); -- netinka dėl TextArea
-    private HBox currentHBox      = new HBox();
+//    System.getProperty("line.separator"); -- netinka dėl TextArea
+    private HBox currentHBox = new HBox();
     final private VBox rootLayout = new VBox(currentHBox);
-        
+
     @Override
-    public void start(Stage stage) throws Exception {     
+    public void start(Stage stage) throws Exception {
         createControls();
-        stage.setScene(new Scene(rootLayout)); 
-        stage.show();                 
+        stage.setScene(new Scene(rootLayout));
+        stage.show();
     }
-    public void addNode(Node node){
+
+    public void addNode(Node node) {
         currentHBox.getChildren().add(node);
     }
-    public Button addButton(String name, EventHandler<ActionEvent> action){
-        Button btn = new Button(name);     
+
+    public Button addButton(String name, EventHandler<ActionEvent> action) {
+        Button btn = new Button(name);
         currentHBox.getChildren().add(btn);
         btn.setOnAction(action);
         return btn;
     }
-    public Text addText(String text){
+
+    public Text addText(String text) {
         Text txt = new Text(text);
         currentHBox.getChildren().add(txt);
         return txt;
-    }    
-    public TextField addTextField(String name, String defValue, double width){
+    }
+
+    public TextField addTextField(String name, String defValue, double width) {
         Text label = new Text("  " + name);
         currentHBox.getChildren().add(label);
-        TextField tf = new TextField(defValue);     
+        TextField tf = new TextField(defValue);
         tf.setPrefWidth(width);
         currentHBox.getChildren().add(tf);
         return tf;
     }
+
     public ComboBox<String> addComboBox(String name,
-                    EventHandler<ActionEvent> action, String... choises){
+            EventHandler<ActionEvent> action, String... choises) {
         Text label = new Text("  " + name);
         currentHBox.getChildren().add(label);
         ComboBox<String> cb = new ComboBox<>();
@@ -63,27 +69,31 @@ public abstract class BaseApps extends Application {
         currentHBox.getChildren().add(cb);
         return cb;
     }
-    public TextArea addTextArea(String colorName, double width, double height){
-        TextArea ta = new TextArea();  
-        ta.setFont(Font.font ("Courier New", 12));
+
+    public TextArea addTextArea(String colorName, double width, double height) {
+        TextArea ta = new TextArea();
+        ta.setFont(Font.font("Courier New", 12));
         ta.setPrefSize(width, height);
-        ta.setStyle(".text-area {" +
-            "-fx-text-fill:white;" +
-            "-fx-control-inner-background:" + colorName + ";" +
-            "-fx-highlight-fill:gray;}" );
+        ta.setStyle(".text-area {"
+                + "-fx-text-fill:white;"
+                + "-fx-control-inner-background:" + colorName + ";"
+                + "-fx-highlight-fill:gray;}");
         currentHBox.getChildren().add(ta);
         return ta;
     }
-    public void addNewHBox(){
+
+    public void addNewHBox() {
         currentHBox = new HBox(3.0);
         currentHBox.setPadding(new Insets(3.0));
         currentHBox.setAlignment(Pos.CENTER_LEFT);
         rootLayout.getChildren().add(currentHBox);
     }
+    
 //    public void removeLastControl(){
 //        currentHBox .getChildren().remove(currentHBox .getChildren().size()-1);
 //    }
+
     // abstraktus metodas reikalaujantis, kad išvestinėse klasėse 
     // būtų konkreti valdymo elementų realizacija
-    public abstract void createControls();    
+    public abstract void createControls();
 }

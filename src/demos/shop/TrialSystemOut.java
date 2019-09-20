@@ -1,7 +1,7 @@
 /** @author Eimutis Karčiauskas, KTU IF Programų inžinerijos katedra, 2018 09 23
  *
  * Tai yra demonstracinė Bandymų klasė - tikrinama vizualiai
- *************************************************************************** */
+ ****************************************************************************/
 package demos.shop;
 
 import java.io.IOException;
@@ -93,16 +93,16 @@ public class TrialSystemOut {
 
     // pagraindinis bandomasis metodas - perjungimas komentarų pagalba
     private void trial() {
-//        trial1();  // vienetinės prekės
-//        trial2();  // formavimas su konstruktoriumi
-//        trial3(input1);  // formavimas iš pirmo eilučių sąrašo
-//        trial3(input2);  // formavimas iš antro eilučių sąrašo
+//        trial1(); // vienetinės prekės
+//        trial2(); // formavimas su konstruktoriumi
+//        trial3(input1); // formavimas iš pirmo eilučių sąrašo
+//        trial3(input2); // formavimas iš antro eilučių sąrašo
         // Prieš išvedant padarome jungtinį eilučių sąrašą
         List<String> output = new ArrayList<>();
 //        output.addAll(input1); // išsaugojame jungtinį sąrašą
 //        output.addAll(input2);
         saveToFile(shop.name + ".csv", output);
-        loadFromFile(shop.name + ".csv");  // formavimas iš failo
+        loadFromFile(shop.name + ".csv"); // formavimas iš failo
         System.out.println(shop.fullReport(30, 10));
     }
 
