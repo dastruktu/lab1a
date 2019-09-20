@@ -1,7 +1,11 @@
 # Laboratorinis darbas Nr. 1a - Demo klasių užduočių santrauka
 
 Čia pateikiamas sąrašas yra pagalbinė priemonė atliekant Lab1a demo programose
-esančias užduotis, tikslias užduočių formuluotes reikėtų žiūrėti programų kode.
+esančias užduotis. Tikslias užduočių formuluotes reikėtų žiūrėti programų kode.
+
+Norint už Lab1a gauti aukštenį negu pakankamą (7) įvertinimą, reikia papildomai
+atlikti laisvai pasirenkamas užduotis, kurių pavyzdžiai pateikti Lab1a reikalavimų
+dokumente.
 
 ## Paketas `demos.console`
 
