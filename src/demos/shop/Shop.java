@@ -80,7 +80,7 @@ public class Shop {
         return itMax;
     }
 
-    // formuoja prekių tekstą, kurių kaina <= limit
+    // formuoja prekių tekstą, kurių kaina >= limit
     public String itemsPriceGE(double limit) {
         StringBuilder sb = new StringBuilder();
         for (Item it : store) {
