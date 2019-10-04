@@ -51,7 +51,7 @@ public class Shop {
     }
 
     // ----- toliau formuojame užduotyje nurodytus metodus
-    public int countUnits() {
+    public int unitCount() {
         int count = 0;
         for (Item item : store) {
             count += item.quantity;
@@ -59,7 +59,7 @@ public class Shop {
         return count;
     }
 
-    public double sumStorePrice() {
+    public double totalPrice() {
         double sum = 0;
         for (Item item : store) {
             sum += item.totalPrice();
@@ -136,8 +136,8 @@ public class Shop {
         StringBuilder sb = new StringBuilder();
         sb.append("===== Parduotuvės " + name + " ATASKAITA\n")
                 .append("----- Prekių skaičius yra : " + store.size() + "\n")
-                .append("---- Vienetų skaičius yra : " + countUnits() + "\n")
-                .append("Sandėlio prekių kaina yra : " + sumStorePrice() + "\n")
+                .append("---- Vienetų skaičius yra : " + unitCount() + "\n")
+                .append("Sandėlio prekių kaina yra : " + totalPrice() + "\n")
                 .append("----- Brangiausia prekė:\n")
                 .append((maxItem == null ? "nėra" : maxItem.toString()) + "\n")
                 .append("----- Prekės, kurių kaina >= " + limGE + "\n")
